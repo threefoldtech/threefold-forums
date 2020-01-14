@@ -242,16 +242,17 @@ const ApplicationRoute = DiscourseRoute.extend(OpenComposer, {
   },
 
   handleShowLogin() {
-    if (this.siteSettings.enable_sso) {
-      const returnPath = encodeURIComponent(window.location.pathname);
-      window.location = Discourse.getURL(
-        "/session/sso?return_path=" + returnPath
-      );
-    } else {
-      this._autoLogin("login", "login-modal", () =>
-        this.controllerFor("login").resetForm()
-      );
-    }
+    window.location = "/threebot/login"
+//     if (this.siteSettings.enable_sso) {
+//       const returnPath = encodeURIComponent(window.location.pathname);
+//       window.location = Discourse.getURL(
+//         "/session/sso?return_path=" + returnPath
+//       );
+//     } else {
+//       this._autoLogin("login", "login-modal", () =>
+//         this.controllerFor("login").resetForm()
+//       );
+//     }
   },
 
   handleShowCreateAccount() {
