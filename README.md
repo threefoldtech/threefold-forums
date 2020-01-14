@@ -34,3 +34,6 @@ To get your environment setup, follow the community setup guide for your operati
 - database files are in directory `{src_code}/data` if you want to delete db totally and reiitialize, delete this directory and `docker rm -f discourse_dev`
 - 3bot service runs in tmux in user : `discourse`
 
+# RUn
+- Dev: `./bin/docker/unicorn`
+
