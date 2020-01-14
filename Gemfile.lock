@@ -303,6 +303,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rbnacl (7.1.0)
+      ffi
     rbtrace (0.4.11)
       ffi (>= 1.0.6)
       msgpack (>= 0.4.3)
@@ -519,6 +521,7 @@ DEPENDENCIES
   rake
   rb-fsevent
   rb-inotify (~> 0.9)
+  rbnacl
   rbtrace
   rchardet
   redis
@@ -557,4 +560,4 @@ DEPENDENCIES
   yaml-lint
 
 BUNDLED WITH
-   2.1.1
+   2.1.4

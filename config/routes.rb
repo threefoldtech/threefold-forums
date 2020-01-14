@@ -21,6 +21,9 @@ Discourse::Application.routes.draw do
   post "webhooks/sendgrid" => "webhooks#sendgrid"
   post "webhooks/sparkpost" => "webhooks#sparkpost"
 
+  get 'threebot/login' => 'threebot#login'
+  get 'threebot/callback' => 'threebot#callback'
+
   scope path: nil, constraints: { format: /.*/ } do
     if Rails.env.development?
       mount Sidekiq::Web => "/sidekiq"
