@@ -1,0 +1,6 @@
+uwsgi
+flask
+pynacl
+uwsgi
+requests
+flask_sessionstore
