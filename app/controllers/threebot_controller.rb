@@ -59,6 +59,8 @@ class ThreebotController < ApplicationController
     user = User.find_by_email(data["email"])
     if user
         session[:user_id] = user.id
+        session.delete("activate_user")
+        user.update_timezone_if_missing(params[:timezone])
         log_on_user(user)
         @current_user = user
      else
@@ -68,6 +70,9 @@ class ThreebotController < ApplicationController
       user.username = params[:username].chomp(".3bot")
       user.name = params[:username].chomp(".3bot")
       user.save()
+
+      session.delete("activate_user")
+      user.update_timezone_if_missing(params[:timezone])
       log_on_user(user)
       @current_user = user
       session[:user_id] = user.id

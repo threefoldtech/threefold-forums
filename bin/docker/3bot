@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PARAMS="$@"
+docker exec -it -u discourse:discourse discourse_dev /bin/bash -c "source /src/3bot/exec.sh"

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PARAMS="$@"
+CMD="cd /src && USER=discourse RAILS_ENV=${RAILS_ENV:=development} bundle $PARAMS"
+docker exec -it -u discourse:discourse discourse_dev /bin/bash -c "sudo rm -f /etc/apt/sources.list.d/google-chrome.list && sudo apt update && sudo apt install -y tmux libsodium-dev python3-pip && pip3 install -r /src/3bot/requirements.pip"
