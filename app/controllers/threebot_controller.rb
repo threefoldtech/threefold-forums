@@ -57,25 +57,58 @@ class ThreebotController < ApplicationController
     data = JSON.load(res.body)
 
     user = User.find_by_email(data["email"])
+
     if user
-        session[:user_id] = user.id
-        session.delete("activate_user")
+         user.update_timezone_if_missing(params[:timezone])
+
+        secure_session[UsersController::HONEYPOT_KEY] = nil
+        secure_session[UsersController::CHALLENGE_KEY] = nil
+
+        # save user email in session, to show on account-created page
+        session[SessionController::ACTIVATE_USER_KEY] = user.id
+
+        # If the user was created as active, they might need to be approved
+        user.create_reviewable if user.active?
+
         user.update_timezone_if_missing(params[:timezone])
         log_on_user(user)
         @current_user = user
+        session[:user_id] = user.id
      else
+
       # create new user
       user = User.new(email: data["email"])
       user.password = 'password123456yttt'
       user.username = params[:username].chomp(".3bot")
       user.name = params[:username].chomp(".3bot")
-      user.save()
+      user.active = true
 
-      session.delete("activate_user")
-      user.update_timezone_if_missing(params[:timezone])
-      log_on_user(user)
-      @current_user = user
-      session[:user_id] = user.id
+      authentication = UserAuthenticator.new(user, session)
+      authentication.start
+      activation = UserActivator.new(user, request, session, cookies)
+      activation.start
+
+      if user.save
+        authentication.finish
+        activation.finish
+        user.update_timezone_if_missing(params[:timezone])
+
+        secure_session[UsersController::HONEYPOT_KEY] = nil
+        secure_session[UsersController::CHALLENGE_KEY] = nil
+
+        # save user email in session, to show on account-created page
+        session["user_created_message"] = activation.message
+        session[SessionController::ACTIVATE_USER_KEY] = user.id
+
+        # If the user was created as active, they might need to be approved
+        user.create_reviewable if user.active?
+
+        user.update_timezone_if_missing(params[:timezone])
+        log_on_user(user)
+        @current_user = user
+        session[:user_id] = user.id
+
+       end
     end
     redirect_to "/"
   end
