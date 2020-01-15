@@ -230,7 +230,7 @@ en:
     generic_error_with_reason: "An error occurred: %{error}"
     go_ahead: "Go ahead"
     sign_up: "Sign Up"
-    log_in: "Log In"
+    log_in: "Login with 3BOT"
     age: "Age"
     joined: "Joined"
     admin_title: "Admin"
