@@ -59,7 +59,7 @@ en:
     am: "am"
     pm: "pm"
 
-  title: "Discourse"
+  title: "TFT Forum"
   topics: "Topics"
   posts: "posts"
   loading: "Loading"
@@ -86,7 +86,7 @@ en:
       git: "Error cloning git repository, access is denied or repository is not found"
       unpack_failed: "Failed to unpack file"
       file_too_big: "The uncompressed file is too big."
-      unknown_file_type: "The file you uploaded does not appear to be a valid Discourse theme."
+      unknown_file_type: "The file you uploaded does not appear to be a valid TFT Forum theme."
     errors:
       component_no_user_selectable: "Theme components can't be user-selectable"
       component_no_default: "Theme components can't be default theme"
@@ -257,7 +257,7 @@ en:
   provider_not_enabled: "You are not permitted to view the requested resource. The authentication provider is not enabled."
   provider_not_found: "You are not permitted to view the requested resource. The authentication provider does not exist."
   read_only_mode_enabled: "The site is in read only mode. Interactions are disabled."
-  invalid_grant_badge_reason_link: "External or invalid discourse link is not allowed in badge reason"
+  invalid_grant_badge_reason_link: "External or invalid TFT Forum link is not allowed in badge reason"
   email_template_cant_be_modified: "This email template can't be modified"
   invalid_whisper_access: "Either whispers are not enabled or you do not have access to create whisper posts"
   not_in_group:
@@ -588,7 +588,7 @@ en:
   staff_category_description: "Private category for staff discussions. Topics are only visible to admins and moderators."
 
   discourse_welcome_topic:
-    title: "Welcome to Discourse"
+    title: "Welcome to TFT Forum"
     body: |
 
       The first paragraph of this pinned topic will be visible as a welcome message to all new visitors on your homepage. It's important!
@@ -1387,7 +1387,7 @@ en:
   site_settings:
     censored_words: "Words that will be automatically replaced with &#9632;&#9632;&#9632;&#9632;"
     delete_old_hidden_posts: "Auto-delete any hidden posts that stay hidden for more than 30 days."
-    default_locale: "The default language of this Discourse instance. You can replace the text of system generated categories and topics at <a href='%{base_path}/admin/customize/site_texts' target='_blank'>Customize / Text</a>."
+    default_locale: "The default language of this TFT Forum instance. You can replace the text of system generated categories and topics at <a href='%{base_path}/admin/customize/site_texts' target='_blank'>Customize / Text</a>."
     allow_user_locale: "Allow users to choose their own language interface preference"
     set_locale_from_accept_language_header: "set interface language for anonymous users from their web browser's language headers. (EXPERIMENTAL, does not work with anonymous cache)"
     support_mixed_text_direction: "Support mixed left-to-right and right-to-left text directions."
@@ -1446,7 +1446,7 @@ en:
     post_excerpt_maxlength: "Maximum length of a post excerpt / summary."
     show_pinned_excerpt_mobile: "Show excerpt on pinned topics in mobile view."
     show_pinned_excerpt_desktop: "Show excerpt on pinned topics in desktop view."
-    post_onebox_maxlength: "Maximum length of a oneboxed Discourse post in characters."
+    post_onebox_maxlength: "Maximum length of a oneboxed TFT Forum post in characters."
     onebox_domains_blacklist: "A list of domains that will never be oneboxed."
     inline_onebox_domains_whitelist: "A list of domains that will be oneboxed in miniature form if linked without a title"
     enable_inline_onebox_on_all_domains: "Ignore inline_onebox_domain_whitelist site setting and allow inline onebox on all domains."
@@ -1520,9 +1520,9 @@ en:
     moderators_create_categories: "Allow moderators to create new categories"
     cors_origins: "Allowed origins for cross-origin requests (CORS). Each origin must include http:// or https://. The DISCOURSE_ENABLE_CORS env variable must be set to true to enable CORS."
     use_admin_ip_whitelist: "Admins can only log in if they are at an IP address defined in the Screened IPs list (Admin > Logs > Screened Ips)."
-    blacklist_ip_blocks: "A list of private IP blocks that should never be crawled by Discourse"
-    whitelist_internal_hosts: "A list of internal hosts that discourse can safely crawl for oneboxing and other purposes"
-    allowed_iframes: "A list of iframe src domain prefixes that discourse can safely allow in posts"
+    blacklist_ip_blocks: "A list of private IP blocks that should never be crawled by TFT Forum"
+    whitelist_internal_hosts: "A list of internal hosts that TFT Forum can safely crawl for oneboxing and other purposes"
+    allowed_iframes: "A list of iframe src domain prefixes that TFT Forum can safely allow in posts"
     whitelisted_crawler_user_agents: "User agents of web crawlers that should be allowed to access the site. WARNING! SETTING THIS WILL DISALLOW ALL CRAWLERS NOT LISTED HERE!"
     blacklisted_crawler_user_agents: "Unique case insensitive word in the user agent string identifying web crawlers that should not be allowed to access the site. Does not apply if whitelist is defined."
     slow_down_crawler_user_agents: "User agents of web crawlers that should be rate limited in robots.txt using the Crawl-delay directive"
@@ -1564,8 +1564,8 @@ en:
     email_domains_whitelist: "A pipe-delimited list of email domains that users MUST register accounts with. WARNING: Users with email domains other than those listed will not be allowed!"
     hide_email_address_taken: "Don't inform users that an account exists with a given email address during signup and from the forgot password form."
     log_out_strict: "When logging out, log out ALL sessions for the user on all devices"
-    version_checks: "Ping the Discourse Hub for version updates and show new version messages on the <a href='%{base_path}/admin' target='_blank'>/admin</a> dashboard"
-    new_version_emails: "Send an email to the contact_email address when a new version of Discourse is available."
+    version_checks: "Ping the TFT Forum Hub for version updates and show new version messages on the <a href='%{base_path}/admin' target='_blank'>/admin</a> dashboard"
+    new_version_emails: "Send an email to the contact_email address when a new version of TFT Forum is available."
 
     invite_expiry_days: "How long user invitation keys are valid, in days"
 
@@ -1587,16 +1587,16 @@ en:
 
     enable_sso: "Enable single sign on via an external site (WARNING: USERS' EMAIL ADDRESSES *MUST* BE VALIDATED BY THE EXTERNAL SITE!)"
     verbose_sso_logging: "Log verbose SSO related diagnostics to <a href='%{base_path}/logs' target='_blank'>/logs</a>"
-    enable_sso_provider: "Implement Discourse SSO provider protocol at the /session/sso_provider endpoint, requires sso_provider_secrets to be set"
+    enable_sso_provider: "Implement TFT Forum SSO provider protocol at the /session/sso_provider endpoint, requires sso_provider_secrets to be set"
     sso_url: "URL of single sign on endpoint (must include http:// or https://)"
     sso_secret: "Secret string used to cryptographically authenticate SSO information, be sure it is 10 characters or longer"
-    sso_provider_secrets: "A list of domain-secret pairs that are using Discourse as an SSO provider. Make sure SSO secret is 10 characters or longer. Wildcard symbol * can be used to match any domain or only a part of it (e.g. *.example.com)."
+    sso_provider_secrets: "A list of domain-secret pairs that are using TFT Forum as an SSO provider. Make sure SSO secret is 10 characters or longer. Wildcard symbol * can be used to match any domain or only a part of it (e.g. *.example.com)."
     sso_overrides_bio: "Overrides user bio in user profile and prevents user from changing it"
     sso_overrides_groups: "Synchronize all manual group membership with groups specified in the groups sso attribute (WARNING: if you do not specify groups all manual group membership will be cleared for user)"
     sso_overrides_email: "Overrides local email with external site email from SSO payload on every login, and prevent local changes. (WARNING: discrepancies can occur due to normalization of local emails)"
     sso_overrides_username: "Overrides local username with external site username from SSO payload on every login, and prevent local changes. (WARNING: discrepancies can occur due to differences in username length/requirements)"
     sso_overrides_name: "Overrides local full name with external site full name from SSO payload on every login, and prevent local changes."
-    sso_overrides_avatar: "Overrides user avatar with external site avatar from SSO payload. If enabled, users will not be allowed to upload avatars on Discourse."
+    sso_overrides_avatar: "Overrides user avatar with external site avatar from SSO payload. If enabled, users will not be allowed to upload avatars on TFT Forum."
     sso_overrides_profile_background: "Overrides user profile background with external site avatar from SSO payload."
     sso_overrides_card_background: "Overrides user card background with external site avatar from SSO payload."
     sso_not_approved_url: "Redirect unapproved SSO accounts to this URL"
@@ -1869,7 +1869,7 @@ en:
     incoming_email_prefer_html: "Use HTML instead of text for incoming email."
     strip_incoming_email_lines: "Remove leading and trailing whitespaces from each line of incoming emails."
 
-    disable_emails: "Prevent Discourse from sending any kind of emails. Select 'yes' to disable emails for all users. Select 'non-staff' to disable emails for non-staff users only."
+    disable_emails: "Prevent TFT Forum from sending any kind of emails. Select 'yes' to disable emails for all users. Select 'non-staff' to disable emails for non-staff users only."
 
     strip_images_from_short_emails: "Strip images from emails having size less than 2800 Bytes"
     short_email_length: "Short email length in Bytes"
@@ -1897,7 +1897,7 @@ en:
     attachment_content_type_blacklist: "List of keywords used to blacklist attachments based on the content type."
     attachment_filename_blacklist: "List of keywords used to blacklist attachments based on the filename."
 
-    forwarded_emails_behaviour: "How to treat a forwarded email to Discourse"
+    forwarded_emails_behaviour: "How to treat a forwarded email to TFT Forum"
     always_show_trimmed_content: "Always show trimmed part of incoming emails. WARNING: might reveal email addresses."
     private_email: "Don't include content from posts or topics in email title or email body. NOTE: also disables digest emails."
     email_total_attachment_size_limit_kb: "Max total size of files attached to outgoing emails. Set to 0 to disable sending of attachments."
@@ -1953,7 +1953,7 @@ en:
     email_link_color: "The color of links in HTML emails. Enter a color name ('blue') or hex value ('#0000FF')."
 
     detect_custom_avatars: "Whether or not to check that users have uploaded custom profile pictures."
-    max_daily_gravatar_crawls: "Maximum number of times Discourse will check Gravatar for custom avatars in a day"
+    max_daily_gravatar_crawls: "Maximum number of times TFT Forum will check Gravatar for custom avatars in a day"
     public_user_custom_fields: "A list of user custom fields that can be retrieved with the API."
     staff_user_custom_fields: "A list of user custom fields that can be retrieved for staff members with the API."
     enable_user_directory: "Provide a directory of users for browsing"
@@ -2574,7 +2574,7 @@ en:
 
   new_version_mailer:
     title: "New Version Mailer"
-    subject_template: "[%{email_prefix}] New Discourse version, update available"
+    subject_template: "[%{email_prefix}] New TFT Forum version, update available"
     text_body_template: |
       Hooray, a new version of [Discourse](https://www.discourse.org) is available!
 
@@ -2585,7 +2585,7 @@ en:
 
       - See what's new in the [release notes](https://meta.discourse.org/tags/release-notes) or view the [raw GitHub changelog](https://github.com/discourse/discourse/commits/master)
 
-      - Visit [meta.discourse.org](https://meta.discourse.org) for news, discussion, and support for Discourse
+      - Visit [meta.discourse.org](https://meta.discourse.org) for news, discussion, and support for TFT Forum
 
   new_version_mailer_with_notes:
     title: "New Version Mailer with Notes"
@@ -2600,7 +2600,7 @@ en:
 
       - See what's new in the [release notes](https://meta.discourse.org/tags/release-notes) or view the [raw GitHub changelog](https://github.com/discourse/discourse/commits/master)
 
-      - Visit [meta.discourse.org](https://meta.discourse.org) for news, discussion, and support for Discourse
+      - Visit [meta.discourse.org](https://meta.discourse.org) for news, discussion, and support for TFT Forum
 
       ### Release notes
 
@@ -3775,7 +3775,7 @@ en:
 
       Please treat this discussion forum with the same respect you would a public park. We, too, are a shared community resource &mdash; a place to share skills, knowledge and interests through ongoing conversation.
 
-      These are not hard and fast rules, merely guidelines to aid the human judgment of our community and keep this a clean and well-lighted place for civilized public discourse.
+      These are not hard and fast rules, merely guidelines to aid the human judgment of our community and keep this a clean and well-lighted place for civilized public TFT Forum.
 
       <a name="improve"></a>
 
@@ -3806,7 +3806,7 @@ en:
 
       The conversations we have here set the tone for every new arrival. Help us influence the future of this community by choosing to engage in discussions that make this forum an interesting place to be &mdash; and avoiding those that do not.
 
-      Discourse provides tools that enable the community to collectively identify the best (and worst) contributions: bookmarks, likes, flags, replies, edits, and so forth. Use these tools to improve your own experience, and everyone else’s, too.
+      TFT Forum provides tools that enable the community to collectively identify the best (and worst) contributions: bookmarks, likes, flags, replies, edits, and so forth. Use these tools to improve your own experience, and everyone else’s, too.
 
       Let’s leave our community better than we found it.
 
@@ -4408,7 +4408,7 @@ en:
   rss_by_tag: "Topics tagged %{tag}"
 
   finish_installation:
-    congratulations: "Congratulations, you installed Discourse!"
+    congratulations: "Congratulations, you installed TFT Forum!"
     register:
       button: "Register"
       title: "Register Admin Account"
@@ -4430,10 +4430,10 @@ en:
     enter: "Enter Safe Mode"
     must_select: "You must select at least one option to enter safe mode."
   wizard:
-    title: "Discourse Setup"
+    title: "TFT Forum Setup"
     step:
       locale:
-        title: "Welcome to your Discourse!"
+        title: "Welcome to your TFT Forum!"
         fields:
           default_locale:
             description: "What’s the default language for your community?"
@@ -4511,7 +4511,7 @@ en:
             description: "General contact web page for you or your organization. Will be displayed on <a href='%{base_path}/about' target='_blank'>your about page</a>."
           site_contact:
             label: "Automated Messages"
-            description: "All automated Discourse personal messages will be sent from this user, such as flag warnings and backup completion notices."
+            description: "All automated TFT Forum personal messages will be sent from this user, such as flag warnings and backup completion notices."
 
       corporate:
         title: "Organization"
@@ -4534,7 +4534,7 @@ en:
       themes_further_reading:
         title: "Themes"
         description:
-          "Looking to customize your Discourse? Take advantage of our powerful theming system:
+          "Looking to customize your TFT Forum? Take advantage of our powerful theming system:
           <ul>
           <li><a href='https://meta.discourse.org/t/63682' target='_blank'>How do I install a theme or theme component?</a></li>
           <li><a href='https://meta.discourse.org/t/110448' target='_blank'>Theme Developer Quick Reference Guide</a></li>
@@ -4593,7 +4593,7 @@ en:
         disabled: "Since local logins are disabled, it’s not possible to send invites to anyone. Please proceed to the next step."
 
       finished:
-        title: "Your Discourse is Ready!"
+        title: "Your TFT Forum is Ready!"
         description: |
           <p>If you ever feel like changing these settings, <b>re-run this wizard any time</b>, or visit <a href='%{base_path}/admin' target='_blank'>your admin section</a>; find it next to the wrench icon in the site menu.</p>
           <p>Have fun, and good luck <a href='https://blog.discourse.org/2014/08/building-a-discourse-community/' target='_blank'>building your new community!</a></p>
