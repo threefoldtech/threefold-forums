@@ -1,5 +1,5 @@
-<a href="https://www.discourse.org/"><img src=
-"https://user-images.githubusercontent.com/1681963/52239617-e2683480-289c-11e9-922b-5da55472e5b4.png"
+<a href="https://forums.threefold.io/"><img src=
+"https://forums.threefold.io/images/discourse-logo-sketch.png"
  width="300px"></a>
 
 
@@ -10,7 +10,7 @@
 - discussion forum
 - long-form chat room
 
-To learn more about the philosophy and goals of the project, [visit **discourse.org**](https://www.discourse.org).
+To learn more about the philosophy and goals of the project, [visit **forums.threefold.io**](https://forums.threefold.io/).
 
 ## Screenshots
 
