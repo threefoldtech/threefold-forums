@@ -11,7 +11,7 @@ class ThreebotController < ApplicationController
   skip_before_action :check_xhr, only: [:callback]
   helper_method :sign_in
 
-   @@authUrl = 'https://login.threefold.me'
+   @@authUrl = ENV["THREEBOT_URL"]
 
  def login
     if !current_user.nil?
