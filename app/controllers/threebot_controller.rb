@@ -45,7 +45,6 @@ class ThreebotController < ApplicationController
         Rails.logger.warn 'Login attempt canceled by user'
         return render json: {"message": "Login cancelled by user"}, status: 400
     end
-    data = JSON.load(params[:data])
     net = Net::HTTP.new("127.0.0.1", 5000)
     net.use_ssl = false
     res = net.get("/data?#{request.query_parameters.to_query}")
@@ -79,8 +78,8 @@ class ThreebotController < ApplicationController
       # create new user
       user = User.new(email: data["email"])
       user.password = 'password123456yttt'
-      user.username = params[:username].chomp(".3bot")
-      user.name = params[:username].chomp(".3bot")
+      user.username = data["username"].gsub(".3bot", "")
+      user.name = user.username
       user.active = true
 
       authentication = UserAuthenticator.new(user, session)

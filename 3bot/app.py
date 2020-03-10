@@ -1,4 +1,4 @@
-from uuid import uuid4
+from uuid import uuid3
 import base64
 import json
 
@@ -91,7 +91,7 @@ def data():
                         json={'signedEmailIdentifier': sei})
     if res.status_code != 200:
       return abort(400, jsonify({'message': 'Email not verified!'}))
-
+    result['email']['username'] = username
     return jsonify(result['email'])
   except:
     return abort(400, jsonify({'message': 'Error decrypting'}))
